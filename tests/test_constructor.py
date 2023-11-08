@@ -21,7 +21,6 @@ class TestConstructor:
         is_active = fuelling.find_element(*TestLocators.FILLINGS_TUB).get_attribute('class')
         assert 'current' in is_active
 
-
     def test_bread_select(self, driver_settings_chrome):
         bread = WebDriverWait(driver_settings_chrome, 5).until(ex_cond.element_to_be_clickable(TestLocators.BUNS_TUB))
         bread.find_element(*TestLocators.SAUCES_TUB).click()
