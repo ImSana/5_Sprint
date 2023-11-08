@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from tests.conftest import driver_settings_chrome
 
+
 class TestConstructor:
 
     def test_sauces_select(self, driver_settings_chrome):

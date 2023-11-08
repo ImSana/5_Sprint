@@ -6,7 +6,7 @@ from tests.conftest import driver_settings_chrome
 
 class TestGoToConstructor:
     def test_personal_account_in_constructor(self, driver_settings_chrome):
-        # Нажать кнопку «Войти в аккаунт»
+
         driver_settings_chrome.find_element(*TestLocators.ENTER_IN_ACCOUNT_BUTTON).click()
         WebDriverWait(driver_settings_chrome, 5).until(ex_cond.url_contains("/login"))
 
@@ -26,7 +26,6 @@ class TestGoToConstructor:
 
         assert "Соберите бургер" == driver_settings_chrome.find_element(*TestLocators.INGREDIENTS_HEADER).text
         assert "https://stellarburgers.nomoreparties.site/" == driver_settings_chrome.current_url
-
 
     def test_go_to_account_in_constructor_by_logo(self, driver_settings_chrome):
 

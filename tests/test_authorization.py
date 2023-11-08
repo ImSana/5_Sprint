@@ -2,10 +2,12 @@ from selenium.webdriver.support import expected_conditions as ex_cond
 from locators import TestLocators
 from selenium.webdriver.support.ui import WebDriverWait
 import data
+
+
 class TestAuthorization:
 
     def test_go_account(self, driver_settings_chrome):
-        # жмём по кнопке «Войти в аккаунт»
+
         driver_settings_chrome.find_element(*TestLocators.ENTER_IN_ACCOUNT_BUTTON).click()
         WebDriverWait(driver_settings_chrome, 5).until(ex_cond.url_contains("/login"))
 
