@@ -45,14 +45,13 @@ class TestLocators:
     SELECTED_INGREDIENT_TAB = By.XPATH,\
         '//*[contains(@class, "tab_tab") and contains(@class, "current")]/child::span'  # Выбранная вкладка
     BUNS_TUB = By.XPATH,\
-        '//*[contains(@class, "text text_type_main-default") and contains(text(), "Булки")]'  # Вкладка булок
+        "//span[text()='Булки']/parent::*"  # Вкладка булок
     SAUCES_TUB = By.XPATH, \
-        '//*[contains(@class, "text text_type_main-default") and contains(text(), "Соусы")]'  # Вкладка соусов
+        '//span[text()="Соусы"]/parent::*'  # Вкладка соусов
     FILLINGS_TUB = By.XPATH, \
-        '//*[contains(@class, "text text_type_main-default") and contains(text(), "Начинки")]'  # Вкладка начинок
+        "//span[text()='Начинки']/parent::*"  # Вкладка начинок
     BUNS_HEADER = By.XPATH, \
         '//*[contains(@class, "text text_type_main-medium") and contains(text(), "Булки")]'  # Заголовок булок
     FILLINGS_HEADER = By.XPATH, \
         '//*[contains(@class, "text text_type_main-medium") and contains(text(), "Начинки")]'  # Заголовок начинок
 
-    SCROL_SOUS = By.XPATH, './/Соус Spicy-X' # тест скрол
